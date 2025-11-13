@@ -42,7 +42,8 @@ header {
   border: 2px solid #000;
 }
 
-.header_title, .banner_text{
+.header_title, 
+.banner_text {
   font-family: "PressStart2P";
   font-weight: 400;
   font-style: Regular;
@@ -59,7 +60,7 @@ header {
 
 /**/
 
-main{
+main {
   display: grid;
   gap: 50px;
   justify-items: center;
@@ -204,7 +205,6 @@ main{
 }
 
 .end_text {
-  
   align-content: center;
   font-family: "PressStart2P";
   font-weight: 400;
@@ -219,7 +219,7 @@ main{
 @media (width < 376px) {
   
   main{
-  bottom: 140px;
+    bottom: 140px;
   }
 
   .page {
@@ -265,42 +265,43 @@ main{
   .post_image_5,
   .post_image_6,
   .post_image_7,
-  .post_image_8  {
-  width: 375px;
-  height: 375px;
+  .post_image_8 {
+    width: 375px;
+    height: 375px;
   }
   
   .post_image_text {  
-  padding: 25px 13px;
+    padding: 25px 13px;
   }
 
   .post_block_title {
-  width: 375px;
-  height: 52px;
+    width: 375px;
+    height: 52px;
   }
 
   .post_content {
-  width: 375px;
+    width: 375px;
   }
 
   .button_block_text {  
-  width: 130px;
+    width: 130px;
   }
 
   .button {
-  left: 177px;
+    left: 177px;
   }
+  
   .end {
-  width: 306px;
-  height: 80px;
-  flex-direction: column;
+    width: 306px;
+    height: 80px;
+    flex-direction: column;
   }
 
   .end_image {
-  margin-top: 15px;
-  margin-left: 138.5px;
-  width: 28px;
-  height: 28px;
+    margin-top: 15px;
+    margin-left: 138.5px;
+    width: 28px;
+    height: 28px;
   }
   
   .end_text {
