@@ -63,16 +63,12 @@ main{
   display: grid;
   gap: 50px;
   justify-items: center;
+  position: relative;
+  bottom: 392px;
 }
 
 .post {
   width: 696px;
-  height: 959px;
-}
-
-.post_1 {
-  position: relative;
-  bottom: 392px;
 }
 
 .post_block_title {
@@ -93,7 +89,16 @@ main{
   padding: 3px 10px;
 }
 
-.post_image {
+.post_image_1,
+.post_image_2,
+.post_image_3,
+.post_image_4,
+.post_image_5,
+.post_image_6,
+.post_image_7,
+.post_image_8 {
+  position: relative;
+  bottom: 2px;
   background-image: url("/images/post_1.svg");
   width: 696px;
   height: 696px;
@@ -102,30 +107,26 @@ main{
 }
 
 .post_image_text {
-  position: relative;
-  left: 573px;
-  top: 25px;
+  display: flex;
+  justify-self: end;
+  padding: 25px;
   opacity: 50%;
   font-family: "PressStart2P";
   font-weight: 400;
   font-size: 14px;
   line-height: 100%;
-  text-transform: uppercase;
 }
 
-@supports ((-webkit-text-stroke: 1px #FFF) or (text-stroke: 1px #FFF)) {
+@supports (-webkit-text-stroke: 1px #FFF) {
     .post_image_text {
-        -webkit-text-stroke: 1px #FFF;
-        text-stroke: 1px #FFF;
+        -webkit-text-stroke: 1px #FFF;      
     }
 }
 
 .post_content {
   padding: 25px 25px;
   position: relative;
-  bottom: 2px;
-  width: 696px;
-  height: 224px;
+  bottom: 4px;
   border: 2px solid #000;
 }
 
@@ -147,6 +148,7 @@ main{
   left: 473px;
   top: 25px;
   gap: 10px;  
+  margin-bottom: 25px;
 }
 
 .button_block_text {
@@ -156,14 +158,152 @@ main{
   justify-content: center;  
 }
 
-.button_text_like, .button_text_unlike {
+.button_text_like_1, .button_text_unlike_1,
+.button_text_like_2, .button_text_unlike_2,
+.button_text_like_3, .button_text_unlike_3,
+.button_text_like_4, .button_text_unlike_4,
+.button_text_like_5, .button_text_unlike_5,
+.button_text_like_6, .button_text_unlike_6,
+.button_text_like_7, .button_text_unlike_7,
+.button_text_like_8, .button_text_unlike_8 {
   align-content: center;
   font-family: "PressStart2P";
   font-weight: 400;
   font-size: 14px;
   line-height: 90%;
 }
+.button_text_unlike_1,
+.button_text_unlike_2,
+.button_text_unlike_3,
+.button_text_unlike_4,
+.button_text_unlike_5,
+.button_text_unlike_6,
+.button_text_unlike_7,
+.button_text_unlike_8 {
+  display: none;
+}
 
 .button_like {
   align-content: center;
+}
+
+
+.end {
+  width: 335px;
+  height: 51px;
+  display: flex;
+  gap: 8px;
+  border: 2px solid #000;
+}
+
+.end_image {
+  margin-top: 15px;
+  margin-left: 19px;
+  width: 21px;
+  height: 21px;
+}
+
+.end_text {
+  
+  align-content: center;
+  font-family: "PressStart2P";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 90%;
+  vertical-align: middle;
+}
+
+
+
+
+@media (width < 376px) {
+  
+  main{
+  bottom: 140px;
+  }
+
+  .page {
+    width: 375px;
+    height: 7443px;
+    margin: 0;
+  }
+
+  header {
+    width: 375px;
+    height: 667px;
+  }
+
+  .banner {
+    margin: 100px 0;
+    width: 375px;
+    height: 323px;
+  }
+
+  .banner_text {
+    display: grid;
+    gap: 20px;
+    margin: 120px 14px;
+    justify-items: center;
+  }
+
+  .header_title {
+    font-size: 49px;
+  }
+
+  .header_text {
+    font-size: 14px;
+  }
+
+  .post {
+  width: 375px;
+  } 
+
+  .post_image_1,
+  .post_image_2,
+  .post_image_3,
+  .post_image_4,
+  .post_image_5,
+  .post_image_6,
+  .post_image_7,
+  .post_image_8  {
+  width: 375px;
+  height: 375px;
+  }
+  
+  .post_image_text {  
+  padding: 25px 13px;
+  }
+
+  .post_block_title {
+  width: 375px;
+  height: 52px;
+  }
+
+  .post_content {
+  width: 375px;
+  }
+
+  .button_block_text {  
+  width: 130px;
+  }
+
+  .button {
+  left: 177px;
+  }
+  .end {
+  width: 306px;
+  height: 80px;
+  flex-direction: column;
+  }
+
+  .end_image {
+  margin-top: 15px;
+  margin-left: 138.5px;
+  width: 28px;
+  height: 28px;
+  }
+  
+  .end_text {
+    margin-left: 19.5px;
+  }
 }
