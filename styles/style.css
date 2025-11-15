@@ -83,7 +83,6 @@ header {
   font-size: var(--size_accent_text);
 }
 
-
 /**/
 
 main {
@@ -138,7 +137,7 @@ main {
   filter: grayscale(75%);
 }
 
-.post_image_3{
+.post_image_3 {
   filter: saturate(350%);
 }
 
@@ -159,7 +158,7 @@ main {
 }
 
 .post_image_8 {
-  filter: blur(2px) brightness(90%) hue-rotate(90deg) saturate(200%) contrast(50%)
+  filter: blur(2px) brightness(90%) hue-rotate(90deg) saturate(200%) contrast(50%);
 }
 
 .post_image_text {
@@ -174,9 +173,9 @@ main {
 }
 
 @supports (-webkit-text-stroke: 1px #FFF) {
-    .post_image_text {
-        -webkit-text-stroke: 1px #FFF;      
-    }
+  .post_image_text {
+    -webkit-text-stroke: 1px #FFF;      
+  }
 }
 
 .post_content {
@@ -197,7 +196,6 @@ main {
   display: flex;
   width: 169px;
   height: 38px;
-  gap: 19px;
   gap: 10px;
 }
 
@@ -213,14 +211,22 @@ main {
   background-color: #000;
 }
 
-.button_text_like_1, .button_text_unlike_1,
-.button_text_like_2, .button_text_unlike_2,
-.button_text_like_3, .button_text_unlike_3,
-.button_text_like_4, .button_text_unlike_4,
-.button_text_like_5, .button_text_unlike_5,
-.button_text_like_6, .button_text_unlike_6,
-.button_text_like_7, .button_text_unlike_7,
-.button_text_like_8, .button_text_unlike_8 {
+.button_text_like_1,
+.button_text_unlike_1,
+.button_text_like_2,
+.button_text_unlike_2,
+.button_text_like_3,
+.button_text_unlike_3,
+.button_text_like_4,
+.button_text_unlike_4,
+.button_text_like_5,
+.button_text_unlike_5,
+.button_text_like_6,
+.button_text_unlike_6,
+.button_text_like_7,
+.button_text_unlike_7,
+.button_text_like_8,
+.button_text_unlike_8 {
   align-content: center;
   font-family: "PressStart2P", monospace;
   font-variation-settings: 'wght' var(--wght_basic_title);
@@ -276,13 +282,13 @@ dialog {
   height: 193px;
   font-family: "PressStart2P", monospace;
   font-size: var(--size_accent_like);
-  Line-height: 150%;
+  line-height: 150%;
   display: grid;
   gap: 30px;
   justify-content: center;
 }
 
-.dialog_text{
+.dialog_text {
   width: 234px;
   height: 63px;
 }
@@ -309,11 +315,8 @@ dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-
-
 @media (width <= 375px) {
-  
-  main{
+  main {
     bottom: 140px;
   }
 
