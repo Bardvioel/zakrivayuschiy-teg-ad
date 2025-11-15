@@ -1,1 +1,12 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --wght_basic_title: 700;
+    --wght_basic_text: 400;
+    --size_basic_text: 18px;
+    --size_accent_lible: 14px;
+    
+    --wght_accent_text: 400;
+    --size_accent_like: 14px;
+    --size_accent_text: 18px;
+    --size_accent_title: 65px;
+}
