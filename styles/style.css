@@ -16,6 +16,10 @@
   width: 1440px;
   height: 9071px;
   margin: auto;
+  font-family: "Inter", sans-serif;
+  font-variation-settings: 'wght' var(--wght_basic_text);
+  font-size: var(--size_basic_text);
+  line-height: 100%;
 }
 
 /**/
@@ -23,7 +27,30 @@
 header {
   width: 1440px;
   height: 960px;
-  background-image: url("/images/background.svg");
+}
+
+.background {
+  width: 1440px;
+  height: 960px;
+  position: fixed;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0 2px,
+      transparent 0px 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      #d3d3d3 0 2px,
+      transparent 0px 4px
+    ),
+    linear-gradient(
+      180deg,
+      #e7e7e7 0%,
+      #e7e7e7 0.01%,
+      #1a1a1a 100%
+    );
+  background-size: cover;
 }
 
 .banner_text {
@@ -44,17 +71,16 @@ header {
 
 .header_title, 
 .banner_text {
-  font-family: "PressStart2P";
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 65px;
+  font-family: "PressStart2P", monospace;
+  font-variation-settings: 'wght' var(--wght_accent_text);
+  font-size: var(--size_accent_title);
   line-height: 100%;
   vertical-align: bottom;
   text-transform: uppercase;
 }
 
 .header_text {
-  font-size: 23px;
+  font-size: var(--size_accent_text);
 }
 
 
@@ -69,25 +95,28 @@ main {
 }
 
 .post {
-  width: 696px;
+  width: 700px;  
+  border: 2px solid #000;
+  background-color: #FFF;
 }
 
 .post_block_title {
   width: 696px;
   height: 31px;
-  border: 2px solid #000;
-  background-color: #FFF;
+  padding: 3px 10px;
 }
 
 .post_title {
-  height: 25px;
-  font-family: "Inter";
-  font-weight: 700;
-  font-style: Bold;
-  font-size: 18px;
-  line-height: 100%;
+  font-variation-settings: 'wght' var(--wght_basic_title);
+  font-size: var(--size_basic_title);
   vertical-align: middle;
-  padding: 3px 10px;
+  height: 25px;
+}
+
+.border_post_image {
+  overflow: hidden;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
 }
 
 .post_image_1,
@@ -98,13 +127,39 @@ main {
 .post_image_6,
 .post_image_7,
 .post_image_8 {
-  position: relative;
-  bottom: 2px;
-  background-image: url("/images/post_1.svg");
+  background-image: url("/images/post_image.png");
   width: 696px;
   height: 696px;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.post_image_2 {
+  filter: grayscale(75%);
+}
+
+.post_image_3{
+  filter: saturate(350%);
+}
+
+.post_image_4 {
+  filter: hue-rotate(30deg);
+}
+
+.post_image_5 {
+  filter: invert(0.75);
+}
+
+.post_image_6 {
+  filter: sepia(90%);
+}
+
+.post_image_7 {
+  filter: blur(20px);
+}
+
+.post_image_8 {
+  filter: blur(2px) brightness(90%) hue-rotate(90deg) saturate(200%) contrast(50%)
 }
 
 .post_image_text {
@@ -112,9 +167,9 @@ main {
   justify-self: end;
   padding: 25px;
   opacity: 50%;
-  font-family: "PressStart2P";
-  font-weight: 400;
-  font-size: 14px;
+  font-family: "PressStart2P", monospace;
+  font-variation-settings: 'wght' var(--wght_basic_text);
+  font-size: var(--size_accent_lible);
   line-height: 100%;
 }
 
@@ -125,18 +180,16 @@ main {
 }
 
 .post_content {
+  display: grid;
   padding: 25px 25px;
-  position: relative;
-  bottom: 4px;
-  border: 2px solid #000;
+  background-color: #FFF;
+  justify-items: end;
+  gap: 25px;
 }
 
 .post_text {
   display: grid;
   gap: 27px;
-  font-family: "Inter";
-  font-weight: 400;
-  font-size: 18px;
   line-height: 21px;
 }
 
@@ -145,11 +198,7 @@ main {
   width: 169px;
   height: 38px;
   gap: 19px;
-  position: relative;
-  left: 473px;
-  top: 25px;
-  gap: 10px;  
-  margin-bottom: 25px;
+  gap: 10px;
 }
 
 .button_block_text {
@@ -157,6 +206,11 @@ main {
   width: 130px;
   border: 2px solid #000;
   justify-content: center;  
+}
+
+.button_block_text:hover {
+  color: #FFF;
+  background-color: #000;
 }
 
 .button_text_like_1, .button_text_unlike_1,
@@ -168,11 +222,12 @@ main {
 .button_text_like_7, .button_text_unlike_7,
 .button_text_like_8, .button_text_unlike_8 {
   align-content: center;
-  font-family: "PressStart2P";
-  font-weight: 400;
+  font-family: "PressStart2P", monospace;
+  font-variation-settings: 'wght' var(--wght_basic_title);
   font-size: 14px;
   line-height: 90%;
 }
+
 .button_text_unlike_1,
 .button_text_unlike_2,
 .button_text_unlike_3,
@@ -188,35 +243,75 @@ main {
   align-content: center;
 }
 
-
 .end {
   width: 335px;
   height: 51px;
   display: flex;
   gap: 8px;
   border: 2px solid #000;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: #FFF;
 }
 
 .end_image {
-  margin-top: 15px;
-  margin-left: 19px;
   width: 21px;
   height: 21px;
 }
 
 .end_text {
-  align-content: center;
-  font-family: "PressStart2P";
-  font-weight: 400;
-  font-size: 14px;
+  font-family: "PressStart2P", monospace;
+  font-size: var(--size_accent_like);
   line-height: 90%;
-  vertical-align: middle;
+}
+
+dialog:not([open]) {
+  display: none;
+}
+
+dialog {  
+  width: 357px;
+  height: 193px;
+  font-family: "PressStart2P", monospace;
+  font-size: var(--size_accent_like);
+  Line-height: 150%;
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+}
+
+.dialog_text{
+  width: 234px;
+  height: 63px;
+}
+
+.dialog_image {
+  width: 39px;
+  height: 39px;
+}
+
+.dialog_flex {
+  display: flex; 
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dialog_button {
+  width: 293px;
+  height: 38px;
+  border: 2px solid #000;
+  background-color: #FFF;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 
 
-
-@media (width < 376px) {
+@media (width <= 375px) {
   
   main{
     bottom: 140px;
@@ -255,7 +350,7 @@ main {
   }
 
   .post {
-  width: 375px;
+    width: 375px;
   } 
 
   .post_image_1,
@@ -266,8 +361,8 @@ main {
   .post_image_6,
   .post_image_7,
   .post_image_8 {
-    width: 375px;
-    height: 375px;
+    width: 371px;
+    height: 371px;
   }
   
   .post_image_text {  
@@ -275,20 +370,16 @@ main {
   }
 
   .post_block_title {
-    width: 375px;
+    width: 371px;
     height: 52px;
   }
 
   .post_content {
-    width: 375px;
+    width: 371px;
   }
 
   .button_block_text {  
     width: 130px;
-  }
-
-  .button {
-    left: 177px;
   }
   
   .end {
@@ -298,13 +389,7 @@ main {
   }
 
   .end_image {
-    margin-top: 15px;
-    margin-left: 138.5px;
     width: 28px;
     height: 28px;
-  }
-  
-  .end_text {
-    margin-left: 19.5px;
   }
 }
