@@ -522,7 +522,7 @@ button {
 
   .post {
     width: 375px;
-  } 
+  }
 
   .post_image_1,
   .post_image_2,
@@ -541,7 +541,7 @@ button {
     height: 375px;
   }
   
-  .post_image_text {  
+  .post_image_text {
     padding: 25px 13px;
   }
 
@@ -559,7 +559,7 @@ button {
     width: 371px;
   }
 
-  .card_like_button {  
+  .card_like_button {
     width: 130px;
   }
   
