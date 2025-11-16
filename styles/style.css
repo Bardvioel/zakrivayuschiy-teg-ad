@@ -339,7 +339,100 @@ button {
   border: 2px solid #000;
 }
 
+
+.dialog-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog-overlay:target {
+  display: flex;
+}
+
+.dialog-content {
+  width: 357px;
+  height: 193px;
+  background-color: #FFF;
+  border: 2px solid #000;
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+  align-content: center;
+  font-family: "PressStart2P", monospace;
+  font-size: var(--size_accent_like);
+  line-height: 150%;
+  position: relative;
+  justify-items: center;
+}
+
+.dialog_flex {
+  width: 293px;
+  display: flex; 
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 20px;
+  gap: 20px;
+}
+
+.dialog_text {
+  width: 234px;
+  height: 63px;
+  margin: 0;
+}
+
+.dialog_image {
+  width: 39px;
+  height: 39px;
+}
+
+.dialog_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 293px;
+  height: 38px;
+  border: 2px solid #000;
+  background-color: #FFF;
+  color: #000;
+  text-decoration: none;
+  font-family: "PressStart2P", monospace;
+  font-size: var(--size_accent_like);
+  line-height: 90%;
+  transition: color 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.dialog_button::before {
+  position: absolute;
+  transform: translateX(-300px);
+  content: '';
+  width: 300px;
+  height: 38px;
+  background-color: #000;
+  z-index: -1;
+  transition: transform 0.5s ease-in-out;
+}
+
+.dialog_button:hover::before {
+  transform: translateX(0px);
+}
+
+.dialog_button:hover {
+  color: #FFF;
+}
+
 .end {
+  text-decoration: none;
   width: 335px;
   height: 51px;
   display: flex;
@@ -400,77 +493,6 @@ button {
   transition: fill 0.5s ease-in-out;
 }
 
-dialog:not([open]) {
-  display: none;
-}
-
-dialog {
-  width: 357px;
-  height: 193px;
-  font-family: "PressStart2P", monospace;
-  font-size: var(--size_accent_like);
-  line-height: 150%;
-  display: grid;
-  gap: 30px;
-  justify-content: center;
-}
-
-.dialog_text {
-  width: 234px;
-  height: 63px;
-}
-
-.dialog_image {
-  width: 39px;
-  height: 39px;
-}
-
-.dialog_flex {
-  display: flex; 
-  justify-content: space-around;
-  align-items: center;
-}
-
-.dialog_button {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  width: 293px;
-  height: 38px;
-  border: 2px solid #000;
-  background-color: #FFF;
-  overflow: hidden; 
-  position: relative;
-  z-index: 0;
-  color: #000;
-  transition: color 0.5s ease-in-out;
-}
-
-.dialog_button::before {
-  display: block;
-  position: absolute;
-  transform: translateX(-300px);
-  content: '';
-  width: 300px;
-  height: 38px; 
-  background-color: #000;
-  z-index: -1;
-  transition: transform 0.5s ease-in-out;
-}
-
-.dialog_button:hover::before {
-  transform: translateX(0px);
-}
-
-.dialog_button:hover {
-  color: #FFF;
-}
-
-dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.75);
-}
 
 @media (width <= 375px) {
   main {
