@@ -372,20 +372,20 @@
             </div>
           </div>
         </div>
-        <button type="button" onclick="this.nextElementSibling.showModal()" class="end">      
+        <button type="button" onclick="this.nextElementSibling.showModal(); return false" class="end">      
             <svg class="end_image" viewBox="0 0 39 39">
-              <use href="#floppy"/>
+                <use href="#floppy"/>
             </svg>
-              <span class="end_text">Сохранить на память</span>
+            <span class="end_text">Сохранить на память</span>
         </button>
         <dialog id="dialog-id">
-          <div class="dialog_flex">
-            <svg class="dialog_image" viewBox="0 0 39 39">
-              <use href="#floppy"/>
-            </svg>
-            <p class="dialog_text">Вставьте дискету, чтобы продолжить</p>
-          </div>
-          <button type="button" class="dialog_button" onclick="this.closest('dialog').close()">OK</button>
+            <div class="dialog_flex">
+                <svg class="dialog_image" viewBox="0 0 39 39">
+                    <use href="#floppy"/>
+                </svg>
+                <p class="dialog_text">Вставьте дискету, чтобы продолжить</p>
+            </div>
+            <button type="button" class="dialog_button" onclick="this.closest('dialog').close(); return false">OK</button>
         </dialog>
       </main>
     <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
