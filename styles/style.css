@@ -1,6 +1,6 @@
 /* Здесь вы напишете основную часть стилей страницы.
 
-Будьте внимательны! Для корректной работы скптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
@@ -89,7 +89,7 @@ main {
 }
 
 .post {
-  width: 700px;  
+  width: 700px;
   border: 2px solid #000;
   background-color: #FFF;
 }
@@ -184,7 +184,7 @@ main {
 
 @supports (-webkit-text-stroke: 1px #FFF) {
   .post_image_text {
-    -webkit-text-stroke: 1px #FFF;      
+    -webkit-text-stroke: 1px #FFF;
   }
 }
 
@@ -222,12 +222,12 @@ button {
 
 .card_like_button {
   padding: 0;
-  overflow: hidden; 
+  overflow: hidden;
   position: relative;
   display: flex;
   width: 130px;
   border: 2px solid #000;
-  justify-content: center;   
+  justify-content: center;
   z-index: 1;
   color: #000;
   transition: color 0.5s ease-in-out;
@@ -350,7 +350,7 @@ button {
   align-content: center;
   align-items: center;
   background-color: #FFF;
-  overflow: hidden; 
+  overflow: hidden;
   position: relative;
   z-index: 1;
   color: #000;
@@ -437,7 +437,7 @@ button {
 }
 
 .dialog_flex {
-  display: flex; 
+  display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 15px;
@@ -453,7 +453,7 @@ button {
   height: 38px;
   border: 2px solid #000;
   background-color: #FFF;
-  overflow: hidden; 
+  overflow: hidden;
   position: relative;
   z-index: 0;
   color: #000;
@@ -469,7 +469,7 @@ button {
   transform: translateX(-300px);
   content: '';
   width: 300px;
-  height: 38px; 
+  height: 38px;
   background-color: #000;
   z-index: -1;
   transition: transform 0.5s ease-in-out;
