@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
   <body class="page">
-    <div class="background">
+    <div class="background"></div>
       <header class="header">
         <div class="banner">
           <div class="banner_text">
@@ -38,9 +38,11 @@
           <div class="border_post_image">
             <div class="post_image_1">
               <img src="/images/post_image.png" alt="Фотография машины">
-              <p class="post_image_text">
-              &lt;/HTML&gt;
-              </p>
+              <div class="lable">
+                <p class="post_image_text">
+                  &lt;/HTML&gt;
+                </p>
+              </div>
             </div>
           </div>
           <div class="post_content">
@@ -79,9 +81,11 @@
           <div class="border_post_image">
             <div class="post_image_2">
               <img src="/images/post_image.png" alt="Фотография машины">
+            <div class="lable">
               <p class="post_image_text">
                 &lt;/HTML&gt;
               </p>
+            </div>
             </div>
           </div>
           <div class="post_content">
@@ -120,9 +124,11 @@
           <div class="border_post_image">
             <div class="post_image_3">
               <img src="/images/post_image.png" alt="Фотография машины">
+            <div class="lable">
             <p class="post_image_text">
               &lt;CSS&gt;
             </p>
+          </div>
             </div>
           </div>
           <div class="post_content">
@@ -161,9 +167,11 @@
           <div class="border_post_image">
             <div class="post_image_4">
               <img src="/images/post_image.png" alt="Фотография машины">
+            <div class="lable">
             <p class="post_image_text">
               &lt;desigions&gt;
             </p>
+          </div>
             </div>
           </div>
           <div class="post_content">
@@ -202,9 +210,11 @@
           <div class="border_post_image">
             <div class="post_image_5">
               <img src="/images/post_image.png" alt="Фотография машины">
+            <div class="lable">
               <p class="post_image_text">
                 care
               </p>
+            </div>
             </div>
           </div>
           <div class="post_content">
@@ -243,9 +253,11 @@
           <div class="border_post_image">
             <div class="post_image_6">
               <img src="/images/post_image.png" alt="Фотография машины">
+            <div class="lable">
               <p class="post_image_text">
               &lt;support&gt;
             </p>
+          </div>
             </div>
           </div>
           <div class="post_content">
@@ -284,9 +296,11 @@
           <div class="border_post_image">
             <div class="post_image_7">
               <img src="/images/post_image.png" alt="Фотография машины">
+            <div class="lable">
               <p class="post_image_text">
               &lt;lifes-style: none;&gt;
             </p>
+          </div>
             </div>
           </div>
           <div class="post_content">
@@ -325,9 +339,11 @@
           <div class="border_post_image">
             <div class="post_image_8">
               <img src="/images/post_image.png" alt="Фотография машины">
+            <div class="lable">
               <p class="post_image_text">
               &lt;experience&gt;
             </p>
+          </div>
             </div>
           </div>
           <div class="post_content">
@@ -356,7 +372,7 @@
             </div>
           </div>
         </div>
-        <button type="button" onclick="window['dialog-id'].showModal();" aria-controls="dialog-id" class="end">      
+        <button type="button" onclick="this.nextElementSibling.showModal()" class="end">      
             <svg class="end_image" viewBox="0 0 39 39">
               <use href="#floppy"/>
             </svg>
@@ -369,11 +385,9 @@
             </svg>
             <p class="dialog_text">Вставьте дискету, чтобы продолжить</p>
           </div>
-          <button type="button" onclick="window['dialog-id'].close();" class="dialog_button">OK</button>
+          <button type="button" class="dialog_button" onclick="this.closest('dialog').close()">OK</button>
         </dialog>
       </main>
-    </div>
-    <script src="./scripts/like.js"></script>
     <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
       <symbol id="floppy">
         <rect width="3" height="3" fill="black" class="end_image_color"/>
@@ -458,6 +472,7 @@
         <rect x="39" y="9" width="3" height="3" transform="rotate(-180 39 9)" fill="black" class="end_image_color"/>
       </symbol>
     </svg>
+    <script src="./scripts/like.js"></script>
   </body>
 </html>
 
