@@ -133,6 +133,10 @@ main {
   position: relative;
 }
 
+.post_image_1 {
+  filter: contrast(115%);
+}
+
 .post_image_2 {
   filter: grayscale(75%);
 }
