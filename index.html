@@ -372,24 +372,24 @@
             </div>
           </div>
         </div>
-        <button type="button" class="end" onclick="document.getElementById('dialog-id').showModal()">      
+        <a href="#dialog-id" class="end">      
             <svg class="end_image" viewBox="0 0 39 39">
                 <use href="#floppy"/>
             </svg>
             <span class="end_text">Сохранить на память</span>
-        </button>
+        </a>
 
-        <dialog id="dialog-id">
-            <div class="dialog_flex">
-                <svg class="dialog_image" viewBox="0 0 39 39">
-                    <use href="#floppy"/>
-                </svg>
-                <p class="dialog_text">Вставьте дискету, чтобы продолжить</p>
+        <div id="dialog-id" class="dialog-overlay">
+            <div class="dialog-content">
+                <div class="dialog_flex">
+                    <svg class="dialog_image" viewBox="0 0 39 39">
+                        <use href="#floppy"/>
+                    </svg>
+                    <p class="dialog_text">Вставьте дискету, чтобы продолжить</p>
+                </div>
+                <a href="#" class="dialog_button">OK</a>
             </div>
-            <form method="dialog">
-                <button class="dialog_button">OK</button>
-            </form>
-        </dialog>
+        </div>      
       </main>
     <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
       <symbol id="floppy">
