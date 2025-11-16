@@ -162,13 +162,18 @@ main {
   filter: blur(2px) brightness(90%) hue-rotate(90deg) saturate(200%) contrast(50%);
 }
 
-.post_image_text {
+.lable {
   position: absolute;
-  left: 548px;
-  bottom: 632px;
+  bottom: 1px;
   z-index: 100;
+  width: 696px;
+  height: 696px;
   display: flex;
-  justify-self: end;
+  justify-content: flex-end;
+}
+
+.post_image_text {
+  z-index: 100;
   padding: 25px;
   opacity: 50%;
   font-family: "PressStart2P", monospace;
@@ -518,6 +523,11 @@ dialog::backdrop {
   .post_image_8 {
     width: 371px;
     height: 371px;
+  }
+
+  .lable {
+    width: 375px;
+    height: 375px;
   }
   
   .post_image_text {  
