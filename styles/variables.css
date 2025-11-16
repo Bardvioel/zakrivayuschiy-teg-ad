@@ -9,4 +9,10 @@
     --size_accent_like: 14px;
     --size_accent_text: 18px;
     --size_accent_title: 65px;
+
+    --color_floppy: #000;
+
+    --contour-color: #000;
+    --animation-fill-color: #FF0000;
+    --accent-color: #000;  
 }
