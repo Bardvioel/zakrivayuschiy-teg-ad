@@ -4,7 +4,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -21,8 +20,6 @@
   font-size: var(--size_basic_text);
   line-height: 100%;
 }
-
-/**/
 
 header {
   width: 1440px;
@@ -69,7 +66,7 @@ header {
   border: 2px solid #000;
 }
 
-.header_title, 
+.header_title,
 .banner_text {
   font-family: "PressStart2P", monospace;
   font-variation-settings: 'wght' var(--wght_accent_text);
@@ -82,8 +79,6 @@ header {
 .header_text {
   font-size: var(--size_accent_text);
 }
-
-/**/
 
 main {
   display: grid;
@@ -128,40 +123,42 @@ main {
 .post_image_8 {
   width: 696px;
   height: 696px;
-  background-size: contain;
+  background-image: url('/images/post_image.png');
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   position: relative;
 }
 
-.post_image_1 {
+.post_image_1 img {
   filter: contrast(115%);
 }
 
-.post_image_2 {
+.post_image_2 img {
   filter: grayscale(75%);
 }
 
-.post_image_3 {
+.post_image_3 img {
   filter: saturate(350%);
 }
 
-.post_image_4 {
+.post_image_4 img {
   filter: hue-rotate(30deg);
 }
 
-.post_image_5 {
+.post_image_5 img {
   filter: invert(0.75);
 }
 
-.post_image_6 {
+.post_image_6 img {
   filter: sepia(90%);
 }
 
-.post_image_7 {
+.post_image_7 img {
   filter: blur(20px);
 }
 
-.post_image_8 {
+.post_image_8 img {
   filter: blur(2px) brightness(90%) hue-rotate(90deg) saturate(200%) contrast(50%);
 }
 
@@ -218,7 +215,7 @@ button {
   line-height: 90%;
 }
 
-.button_block_text {
+.card__like-button {
   padding: 0;
   overflow: hidden; 
   position: relative;
@@ -231,11 +228,11 @@ button {
   transition: color 0.5s ease-in-out;
 }
 
-.button_block_text:focus-visible {
+.card__like-button:focus-visible {
   box-shadow: 2px 2px #000;
 }
 
-.button_block_text::before {
+.card__like-button::before {
   position: absolute;
   transform: translateX(-130px);
   content: '';
@@ -246,20 +243,15 @@ button {
   transition: transform 0.5s ease-in-out;
 }
 
-.button_block_text:hover::before {  
+.card__like-button:hover::before {
   transform: translateX(0px);
 }
 
-.button_block_text:hover {
+.card__like-button:hover {
   color: #FFF;
 }
 
-.button_text_like {
-  align-content: center;
-}
-
-.button_like {  
-  padding: 0;
+.button__text {
   align-content: center;
 }
 
@@ -274,8 +266,7 @@ button {
   transition: border 0.3s ease;
 }
 
-
-.like_button .sparks{
+.like_button .sparks {
   opacity: 0;
 }
 
@@ -385,7 +376,7 @@ button {
   transition: transform 0.5s ease-in-out;
 }
 
-.end:hover::before {  
+.end:hover::before {
   transform: translateX(0px);
 }
 
@@ -408,7 +399,7 @@ dialog:not([open]) {
   display: none;
 }
 
-dialog {  
+dialog {
   width: 357px;
   height: 193px;
   font-family: "PressStart2P", monospace;
@@ -437,7 +428,6 @@ dialog {
 
 .dialog_button {
   display: flex;
-  border: 2px solid #000;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
@@ -465,7 +455,7 @@ dialog {
   transition: transform 0.5s ease-in-out;
 }
 
-.dialog_button:hover::before {  
+.dialog_button:hover::before {
   transform: translateX(0px);
 }
 
@@ -548,7 +538,7 @@ dialog::backdrop {
     width: 371px;
   }
 
-  .button_block_text {  
+  .card__like-button {  
     width: 130px;
   }
   
