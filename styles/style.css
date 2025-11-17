@@ -125,7 +125,6 @@ main {
 .post_image_8 {
   width: 696px;
   height: 696px;
-  background-image: url('/images/post_image.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
