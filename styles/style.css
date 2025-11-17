@@ -27,9 +27,11 @@ header {
 }
 
 .background {
-  width: 1440px;
+  width: 2000px;
   height: 960px;
   position: fixed;
+  left: 0;
+  right: 0;
   background-image: 
     repeating-linear-gradient(
       90deg,
