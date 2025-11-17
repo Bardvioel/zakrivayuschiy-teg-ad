@@ -266,8 +266,7 @@ button {
 
 .like_button {
   padding: 0;
-  background: none;
-  border: none;
+  border: 2px solid #FFF;
   transition: border 0.3s ease;
 }
 
